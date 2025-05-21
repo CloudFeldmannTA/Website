@@ -7,11 +7,11 @@ Remember, that these examples are just that, examples, they can be reworked to l
 
 All the extras:
 
-- Responsive layout, with min. one media query
-- CSS Animation
-- Interactive API with a textbox
-- Download button for local files
-- Switch Light/Dark mode
-- Build-in Design Canvas Element
-- Navigation bar page overview
-- Linked subpage, with link back
++ Responsive layout, with min. one media query
++ CSS Animation
++ Interactive API with a textbox
++ Download button for local files
++ Switch Light/Dark mode
++ Build-in Design Canvas Element
++ Navigation bar page overview
++ Linked subpage, with link back

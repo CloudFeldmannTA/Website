@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +9,43 @@
     <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
     <title>WebDev Extras Example</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <script src="index.js"></script> 
+    <script src="index.js"></script>
 </head>
-<body id="body" class="dark-mode">
+
+<body id="body">
     <header>
         <h1>Hello! This is an example page!</h1>
         <p>These are all the ways we can add to our site</p>
     </header>
 
-<!-- NAVBAR -->
+    <!-- NAVBAR -->
     <nav>
-        <a href="#1">Watch a guy run around!</a>
-        <a href="#2">Colorful!</a>
+        <a href="#runner">Watch a guy run around!</a>
+        <a href="#canvas">Colorful!</a>
         <a href="#weather-container">Ask the oracle about the weather in...</a>
     </nav>
 
-<!-- DARK/LIGHT MODE -->
+    <!-- DARK/LIGHT MODE -->
 
-<button class="switch" onclick="myFunction()">Toggle dark/light mode</button>
+    <button class="switch" onclick="myFunction()">Toggle dark/light mode</button>
 
-<!-- RUNNING MAN -->
-<section class="runner" id="1">
-    <h1>This guy is really fast!</h1>
-    <img class="animation" src="man-walking-icon.webp"> 
-</section>
-<img class="road" src="road.png">
+    <!-- RUNNING MAN -->
+    <section class="runner" id="runner">
+        <h1>This guy is really fast!</h1>
+        <img class="animation" src="man-walking-icon.webp">
+    </section>
+    <img class="road" src="road.png">
 
-<!-- COLORFUL -->
+    <!-- COLORFUL -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Look at this pretty gradient I made!</h1>
+    <canvas id="canvas" width="100%" height="100px">mewo</canvas>
 
 
-
-<!-- ORACLE -->
+    <!-- ORACLE -->
     <div class="oracle" id="weather-container">
         <h2>THE ORACLE SAYS</h2>
         <input type="text" id="city" placeholder="Enter a city">
@@ -51,10 +57,22 @@
     </div>
 
 
-<!-- LINKED CAT PAGE -->
+    <!-- LINKED CAT PAGE -->
     <footer>
         <a href="secondpage.html">Here goes the other page!!</a>
     </footer>
 
+    <br />
+    <br />
+    <div class="links">
+        <a href="https://www.instagram.com/techacademy_/"><i class="fa fa-instagram"></i></a>
+        <div class="vl"></div>
+        <div class="vl"></div>
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUUcmljayByb2xsIG90aGVyIGxpbms%3D"><i
+                class="fa fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/company/techacdmy"><i class="fa fa-linkedin"></i></a>
+    </div>
+
 </body>
+
 </html>

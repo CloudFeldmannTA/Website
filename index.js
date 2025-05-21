@@ -1,3 +1,5 @@
+// ORACLE SAYS
+
 function getWeather() {
     const apiKey = 'ecd8a4ac0bdcaed5139dd20173a6d6e8';
     const city = document.getElementById('city').value;
@@ -103,4 +105,20 @@ function showImage() {
 function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode");
- }
+}
+
+// FOR FUNNY COLORS
+
+window.addEventListener('load', function () {
+    var c = document.getElementById("canvas"); // <-- changed from "myCanvas" to "canvas"
+    if (c) {
+        var ctx = c.getContext("2d");
+        // Create gradient
+        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "magenta");
+        grd.addColorStop(0.5, "darkblue");
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, 100, 100);
+    }
+});

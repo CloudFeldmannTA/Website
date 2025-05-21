@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.addEventListener('load', function () {
+            var c = document.getElementById('canvas');
+            if (c) {
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.moveTo(0, 50);
+                ctx.lineTo(400, 50);
+                ctx.strokeStyle = 'blue';
+                ctx.lineWidth = 3;
+                ctx.stroke();
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="100"></canvas>
+</body>
+
+</html>

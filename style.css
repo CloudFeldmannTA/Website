@@ -1,31 +1,77 @@
+/* Base Styles & Layout */
 body {
     background-color: lightcyan;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    min-height: 100vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
 header {
-    top: 0;
+    width: 100%;
     margin-top: 0;
     padding: 50px;
     background-color: aquamarine;
     box-sizing: border-box;
-    width: 100%;
 }
 
 footer {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 100px;
+    text-align: center;
+    align-content: center;
 }
 
+/* Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 30px;
+    text-decoration: none;
+    color: #000;
+    width: auto;
+}
+
+nav a:hover {
+    background-color: rgba(38, 41, 53, 0.75);
+    color: blanchedalmond;
+}
+
+a:visited {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        display: block;
+    }
+
+    nav a {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        width: auto;
+    }
+}
+
+/* Runner Animation */
 .runner {
     text-align: center;
     position: relative;
@@ -41,17 +87,14 @@ footer {
 .animation {
     position: absolute;
     left: 0;
-    margin-top: 50px;
     top: 50%;
+    margin-top: 50px;
     transform: translateY(-50%);
     padding: 15px;
-    text-align: right;
     width: 50px;
     height: 50px;
-    animation-name: moveAndFlip;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    animation: moveAndFlip 5s ease-in-out infinite;
+    text-align: right;
 }
 
 @keyframes moveAndFlip {
@@ -70,79 +113,38 @@ footer {
     100% {
         transform: translateX(0) scaleX(1);
     }
-
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 9999;
+
+/* Funny Colors */
+#colorful-section {
     display: flex;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: white;
-    color: black;
+    margin: 40px 0;
 }
 
-nav a {
-    align-content: center;
-    text-align: center;
-    display: inline-block;
-    padding: 30px;
-    text-decoration: none;
-    width: auto;
-}
-
-a:visited {
-    color: inherit;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-color: rgba(38, 41, 53, 0.75);
-    color: blanchedalmond;
-    text-decoration: none;
-}
-
-
-footer {
-    align-content: center;
-    text-align: center;
-}
-
-.cat {
+#canvas {
+    margin-top: 50px;
     display: block;
-    margin: 0 auto;
-    width: 50%;
-    padding: 50px;
+    border: 2px solid #664190;
+    background: #f8f8ff;
+    width: 98.5vw;
+    height: 300px;
 }
 
-.download {
-    align-content: center;
-    text-align: center;
-    margin-right: 50%;
+#canvas:focus,
+#canvas:hover {
+    box-shadow: 0 4px 32px rgba(102, 65, 144, 0.18);
+    outline: none;
 }
 
-.container {
-    height: 50px;
-    position: relative;
-}
 
-.vertical-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 47.5%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-/* API Oracle for weather */
-
+/* Oracle Section */
 #weather-container {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.5);
     max-width: 400px;
     padding: 20px;
     border-radius: 15px;
@@ -155,7 +157,7 @@ footer {
 h2,
 label,
 p {
-    color: #000000;
+    color: #000;
     margin: 8px 0;
 }
 
@@ -216,7 +218,7 @@ input {
     flex-direction: column;
     align-items: center;
     margin-right: 10px;
-    color: rgb(0, 0, 0);
+    color: #000;
 }
 
 .hourly-item img {
@@ -226,12 +228,12 @@ input {
 }
 
 #hourly-heading {
-    color: #000000;
+    color: #000;
     margin-top: 10px;
 }
 
-/* Theme Switch */
 
+/* Light & Dark Mode */
 button {
     background: #000527;
     color: white;
@@ -289,4 +291,43 @@ button {
 .dark-mode button {
     background-color: lightcyan;
     color: black;
+}
+
+
+/* Miscellaneous */
+.cat {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    max-width: 600px;
+    padding: 50px;
+}
+
+.download {
+    align-content: center;
+    text-align: center;
+    margin-right: 50%;
+}
+
+.container {
+    height: 50px;
+    position: relative;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 47.5%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.links {
+    display: flex;
+    margin-top: 20px;
+}
+
+.links a {
+    padding: 15px;
 }
